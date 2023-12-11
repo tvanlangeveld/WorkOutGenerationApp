@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class StartPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       print(APImanager.shared.getExercises(muscle: "chest"))
     }
 
 

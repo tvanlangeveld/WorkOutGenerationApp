@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		0A3FB4392B276FA5005E0AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB4382B276FA5005E0AEC /* AppDelegate.swift */; };
 		0A3FB43B2B276FA5005E0AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB43A2B276FA5005E0AEC /* SceneDelegate.swift */; };
-		0A3FB43D2B276FA5005E0AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB43C2B276FA5005E0AEC /* ViewController.swift */; };
+		0A3FB43D2B276FA5005E0AEC /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB43C2B276FA5005E0AEC /* StartPageViewController.swift */; };
 		0A3FB4402B276FA5005E0AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3FB43E2B276FA5005E0AEC /* Main.storyboard */; };
 		0A3FB4432B276FA5005E0AEC /* workoutGenerationApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB4412B276FA5005E0AEC /* workoutGenerationApp.xcdatamodeld */; };
 		0A3FB4452B276FA6005E0AEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A3FB4442B276FA6005E0AEC /* Assets.xcassets */; };
 		0A3FB4482B276FA6005E0AEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A3FB4462B276FA6005E0AEC /* LaunchScreen.storyboard */; };
+		0A3FB4502B27708D005E0AEC /* APImanager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB44F2B27708D005E0AEC /* APImanager.swift */; };
+		0A3FB4582B277246005E0AEC /* WorkOutGen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB4572B277246005E0AEC /* WorkOutGen.swift */; };
+		0A3FB45A2B277277005E0AEC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB4592B277277005E0AEC /* Constants.swift */; };
+		0AFFC6062B278465005E0025 /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFC6052B278465005E0025 /* OptionViewController.swift */; };
+		0AFFC6082B278475005E0025 /* WorkOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFFC6072B278475005E0025 /* WorkOutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0A3FB4352B276FA5005E0AEC /* workoutGenerationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workoutGenerationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FB4382B276FA5005E0AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A3FB43A2B276FA5005E0AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0A3FB43C2B276FA5005E0AEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0A3FB43C2B276FA5005E0AEC /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
 		0A3FB43F2B276FA5005E0AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A3FB4422B276FA5005E0AEC /* workoutGenerationApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = workoutGenerationApp.xcdatamodel; sourceTree = "<group>"; };
 		0A3FB4442B276FA6005E0AEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A3FB4472B276FA6005E0AEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A3FB4492B276FA6005E0AEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0A3FB44F2B27708D005E0AEC /* APImanager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APImanager.swift; sourceTree = "<group>"; };
+		0A3FB4572B277246005E0AEC /* WorkOutGen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutGen.swift; sourceTree = "<group>"; };
+		0A3FB4592B277277005E0AEC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0AFFC6052B278465005E0025 /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		0AFFC6072B278475005E0025 /* WorkOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,69 @@
 		0A3FB4372B276FA5005E0AEC /* workoutGenerationApp */ = {
 			isa = PBXGroup;
 			children = (
-				0A3FB4382B276FA5005E0AEC /* AppDelegate.swift */,
-				0A3FB43A2B276FA5005E0AEC /* SceneDelegate.swift */,
-				0A3FB43C2B276FA5005E0AEC /* ViewController.swift */,
-				0A3FB43E2B276FA5005E0AEC /* Main.storyboard */,
-				0A3FB4442B276FA6005E0AEC /* Assets.xcassets */,
-				0A3FB4462B276FA6005E0AEC /* LaunchScreen.storyboard */,
+				0A3FB4552B277133005E0AEC /* Models */,
+				0A3FB4542B277112005E0AEC /* View */,
+				0A3FB45B2B2772C1005E0AEC /* Controllers */,
+				0A3FB4512B277093005E0AEC /* Managers */,
+				0A3FB4562B277153005E0AEC /* Utilities */,
+				0A3FB4522B2770B5005E0AEC /* Support */,
 				0A3FB4492B276FA6005E0AEC /* Info.plist */,
 				0A3FB4412B276FA5005E0AEC /* workoutGenerationApp.xcdatamodeld */,
 			);
 			path = workoutGenerationApp;
+			sourceTree = "<group>";
+		};
+		0A3FB4512B277093005E0AEC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				0A3FB44F2B27708D005E0AEC /* APImanager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		0A3FB4522B2770B5005E0AEC /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0A3FB43A2B276FA5005E0AEC /* SceneDelegate.swift */,
+				0A3FB4382B276FA5005E0AEC /* AppDelegate.swift */,
+				0A3FB4442B276FA6005E0AEC /* Assets.xcassets */,
+				0A3FB4462B276FA6005E0AEC /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		0A3FB4542B277112005E0AEC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0A3FB43E2B276FA5005E0AEC /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A3FB4552B277133005E0AEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0A3FB4572B277246005E0AEC /* WorkOutGen.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		0A3FB4562B277153005E0AEC /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0A3FB4592B277277005E0AEC /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0A3FB45B2B2772C1005E0AEC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0A3FB43C2B276FA5005E0AEC /* StartPageViewController.swift */,
+				0AFFC6052B278465005E0025 /* OptionViewController.swift */,
+				0AFFC6072B278475005E0025 /* WorkOutViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A3FB43D2B276FA5005E0AEC /* ViewController.swift in Sources */,
+				0A3FB4502B27708D005E0AEC /* APImanager.swift in Sources */,
+				0A3FB43D2B276FA5005E0AEC /* StartPageViewController.swift in Sources */,
 				0A3FB4392B276FA5005E0AEC /* AppDelegate.swift in Sources */,
 				0A3FB43B2B276FA5005E0AEC /* SceneDelegate.swift in Sources */,
+				0A3FB45A2B277277005E0AEC /* Constants.swift in Sources */,
+				0AFFC6062B278465005E0025 /* OptionViewController.swift in Sources */,
+				0AFFC6082B278475005E0025 /* WorkOutViewController.swift in Sources */,
+				0A3FB4582B277246005E0AEC /* WorkOutGen.swift in Sources */,
 				0A3FB4432B276FA5005E0AEC /* workoutGenerationApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
