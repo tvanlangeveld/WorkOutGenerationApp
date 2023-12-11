@@ -11,7 +11,7 @@ class StartPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       print(APImanager.shared.getExercises(muscle: "chest"))
+       
     }
 
 

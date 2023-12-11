@@ -48,6 +48,7 @@ class APImanager {
             
             let task = session.dataTask(with: request) { data, response, error in
                 let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 
                 if let error = error {
                     print("Error retrieving workouts: \(error)")
@@ -55,10 +56,6 @@ class APImanager {
                 }
                 
                 if let data = data {
-                    
-                    if let JSONString = String(data: data, encoding: String.Encoding.utf8) {
-                        print(JSONString)
-                    }
                     
                     do {
                         

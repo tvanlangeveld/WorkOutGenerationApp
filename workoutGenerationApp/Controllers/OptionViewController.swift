@@ -11,6 +11,8 @@ import UIKit
 
 class OptionViewController: UIViewController {
     
+    
+    
     let workOutTypes = ["abdominals",
                         "abductors",
                         "adductors",
@@ -28,12 +30,16 @@ class OptionViewController: UIViewController {
                         "traps",
                         "triceps"]
     
+    
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
 
     
     func configureViewController(){
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
     
@@ -43,7 +49,23 @@ class OptionViewController: UIViewController {
 
     }
     
+    
+    
+    @IBSegueAction func loadWorkOut(_ coder: NSCoder) -> WorkOutViewController? {
+        
+       if let indexPath = tableView.indexPathForSelectedRow{
+            
+            let workOutGroup = workOutTypes[indexPath.row]
+           
+           return WorkOutViewController(coder: coder, workOutType:workOutGroup )
+
+       } else {
+           return nil
+       }
+    }
+    
 }
+
 
 
 extension OptionViewController: UITableViewDataSource {
@@ -61,6 +83,10 @@ extension OptionViewController: UITableViewDataSource {
     
 }
 
+
+extension OptionViewController: UITableViewDelegate{
+    
+}
 
 
 

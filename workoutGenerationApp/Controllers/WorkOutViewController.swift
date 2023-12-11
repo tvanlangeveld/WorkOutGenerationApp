@@ -11,17 +11,32 @@ import UIKit
 
 class WorkOutViewController: UIViewController, APIdelegate {
     
+    var workOutType = ""
+
+    init?(coder: NSCoder, workOutType: String) {
+        self.workOutType = workOutType
+        
+        super.init(coder: coder)
+    }
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
     
     @IBOutlet weak var tableView: UITableView!
     
     
+    @IBOutlet weak var titleLabel: UILabel!
     
     var exercisesArray = [Exercise]()
     
     
     
     func exercisesRetrived(exercises: [Exercise]) {
-        exercisesArray = exercises
+        DispatchQueue.main.async {
+            self.exercisesArray = exercises
+            self.tableView.reloadData()
+            
+        }
         
     }
     
@@ -31,19 +46,35 @@ class WorkOutViewController: UIViewController, APIdelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         APImanager.shared.delegate = self
-//        APImanager.shared.getExercises(muscle: String)
-        
+        tableView.dataSource = self
+        tableView.delegate = self
+        APImanager.shared.getExercises(muscle: workOutType)
+        titleLabel.text = workOutType
+    }
+
+}
+
+extension WorkOutViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return exercisesArray.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
+        cell?.textLabel?.text = exercisesArray[indexPath.row].name
+        cell?.detailTextLabel!.text = exercisesArray[indexPath.row].equipment
+        
+        
+        return cell!
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
+    
+    
+}
 
+
+extension WorkOutViewController: UITableViewDelegate{
+    
 }
