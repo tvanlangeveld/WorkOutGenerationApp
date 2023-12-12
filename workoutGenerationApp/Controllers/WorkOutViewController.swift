@@ -9,10 +9,13 @@ import UIKit
 
 
 
-class WorkOutViewController: UIViewController, APIdelegate {
+class WorkOutViewController: UIViewController, APIdelegate, UITableViewDelegate {
+    
+    var workOutCell = workOutAddCell()
+    var workOutText: String = ""
     
     var workOutType = ""
-
+    
     init?(coder: NSCoder, workOutType: String) {
         self.workOutType = workOutType
         
@@ -50,31 +53,37 @@ class WorkOutViewController: UIViewController, APIdelegate {
         tableView.delegate = self
         APImanager.shared.getExercises(muscle: workOutType)
         titleLabel.text = workOutType
+        
+        tableView.register(UINib(nibName: "workOutAddCell", bundle: nil), forCellReuseIdentifier: "workOutCellID")
     }
-
+    
 }
 
 extension WorkOutViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return exercisesArray.count
+        return exercisesArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cellID")
-        cell?.textLabel?.text = exercisesArray[indexPath.row].name
-        cell?.detailTextLabel!.text = exercisesArray[indexPath.row].equipment
+        let cell = tableView.dequeueReusableCell(withIdentifier: "workOutCellID") as! workOutAddCell
+        cell.delegate = self
+        cell.setExercise(exercise: exercisesArray[indexPath.row])
+        return cell
         
-        
-        return cell!
-
     }
-    
     
 }
 
 
-extension WorkOutViewController: UITableViewDelegate{
+extension WorkOutViewController: workOutAddCellDelegate {
+    func didTapBtn(exercise: Exercise) {
+        WorkOuts.shared.addExercise(exercise: exercise)
+    }
+    
+ 
+    
+    
     
 }

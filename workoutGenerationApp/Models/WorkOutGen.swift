@@ -8,3 +8,12 @@
 import Foundation
 
 
+class WorkOuts {
+    var exercises: [Exercise] = []
+    static let shared = WorkOuts()
+    
+    
+    func addExercise(exercise: Exercise) {
+        exercises.append(exercise)
+    }
+}

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A2984D52B28DFE800F8576D /* workOutAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2984D32B28DFE800F8576D /* workOutAddCell.swift */; };
+		0A2984D62B28DFE800F8576D /* workOutAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2984D42B28DFE800F8576D /* workOutAddCell.xib */; };
 		0A3FB4392B276FA5005E0AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB4382B276FA5005E0AEC /* AppDelegate.swift */; };
 		0A3FB43B2B276FA5005E0AEC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB43A2B276FA5005E0AEC /* SceneDelegate.swift */; };
 		0A3FB43D2B276FA5005E0AEC /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A3FB43C2B276FA5005E0AEC /* StartPageViewController.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A2984D32B28DFE800F8576D /* workOutAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workOutAddCell.swift; sourceTree = "<group>"; };
+		0A2984D42B28DFE800F8576D /* workOutAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = workOutAddCell.xib; sourceTree = "<group>"; };
 		0A3FB4352B276FA5005E0AEC /* workoutGenerationApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = workoutGenerationApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A3FB4382B276FA5005E0AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0A3FB43A2B276FA5005E0AEC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A2984D22B28DFC900F8576D /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0A2984D32B28DFE800F8576D /* workOutAddCell.swift */,
+				0A2984D42B28DFE800F8576D /* workOutAddCell.xib */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		0A3FB42C2B276FA5005E0AEC = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +87,7 @@
 				0A3FB4512B277093005E0AEC /* Managers */,
 				0A3FB4562B277153005E0AEC /* Utilities */,
 				0A3FB4522B2770B5005E0AEC /* Support */,
+				0A2984D22B28DFC900F8576D /* Custom Cells */,
 				0A3FB4492B276FA6005E0AEC /* Info.plist */,
 				0A3FB4412B276FA5005E0AEC /* workoutGenerationApp.xcdatamodeld */,
 			);
@@ -194,6 +208,7 @@
 				0A3FB4482B276FA6005E0AEC /* LaunchScreen.storyboard in Resources */,
 				0A3FB4452B276FA6005E0AEC /* Assets.xcassets in Resources */,
 				0A3FB4402B276FA5005E0AEC /* Main.storyboard in Resources */,
+				0A2984D62B28DFE800F8576D /* workOutAddCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A3FB4502B27708D005E0AEC /* APImanager.swift in Sources */,
+				0A2984D52B28DFE800F8576D /* workOutAddCell.swift in Sources */,
 				0A3FB43D2B276FA5005E0AEC /* StartPageViewController.swift in Sources */,
 				0A3FB4392B276FA5005E0AEC /* AppDelegate.swift in Sources */,
 				0A3FB43B2B276FA5005E0AEC /* SceneDelegate.swift in Sources */,
