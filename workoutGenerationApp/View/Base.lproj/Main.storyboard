@@ -22,9 +22,17 @@
                                     <constraint firstAttribute="height" constant="60" id="o1x-xu-IYv"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Begin Work Out"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Build Work Out"/>
                                 <connections>
                                     <segue destination="sqv-8v-faM" kind="show" id="beB-tz-kg5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-oO-g51">
+                                <rect key="frame" x="160" y="768" width="73" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Profile"/>
+                                <connections>
+                                    <segue destination="KRk-2A-Obw" kind="show" id="nhH-Up-85k"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -33,6 +41,8 @@
                         <constraints>
                             <constraint firstItem="uT7-o4-pub" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="111" id="Glr-Xn-nVj"/>
                             <constraint firstItem="uT7-o4-pub" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Llx-QI-EGK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Li0-oO-g51" secondAttribute="bottom" constant="15" id="eI8-B5-24D"/>
+                            <constraint firstItem="Li0-oO-g51" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kr3-Xb-Fyt"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uT7-o4-pub" secondAttribute="trailing" constant="111" id="lge-56-a9q"/>
                             <constraint firstItem="uT7-o4-pub" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sHi-Ob-dVs"/>
                         </constraints>
@@ -42,6 +52,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="-27.464788732394368"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="0PY-gN-MGO">
+            <objects>
+                <viewController id="KRk-2A-Obw" customClass="ProfileViewController" customModule="workoutGenerationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="elc-BK-hhO">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-I5-TeL">
+                                <rect key="frame" x="0.0" y="278" width="393" height="540"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VZ3-fs-aEm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="bottom" secondItem="VZ3-fs-aEm" secondAttribute="bottom" id="FpP-wo-TRp"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="top" secondItem="VZ3-fs-aEm" secondAttribute="top" constant="175" id="jxk-3g-7lV"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="leading" secondItem="VZ3-fs-aEm" secondAttribute="leading" id="kTQ-Db-NoT"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="trailing" secondItem="VZ3-fs-aEm" secondAttribute="trailing" id="lbC-4g-EJW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="d1A-Sx-CSR"/>
+                    <connections>
+                        <outlet property="tableView" destination="bmx-I5-TeL" id="fhj-ua-fJU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2c-Qa-qIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="660.56338028169023"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VBY-tm-f1O">
@@ -117,16 +158,13 @@
                                 <rect key="frame" x="16" y="113" width="361" height="241"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="ZYA-Hp-4JK">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="241"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pex-4r-wuY">
-                                        <rect key="frame" x="0.0" y="36" width="361" height="205"/>
-                                    </imageView>
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bfi-gl-7c1">
