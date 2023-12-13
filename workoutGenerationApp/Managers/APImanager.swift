@@ -12,7 +12,7 @@ protocol APIdelegate {
     func exercisesRetrived(exercises: [Exercise])
 }
 
-struct Exercise: Codable {
+struct Exercise: Codable, Equatable {
     let name: String
     let type: String
     let muscle: String

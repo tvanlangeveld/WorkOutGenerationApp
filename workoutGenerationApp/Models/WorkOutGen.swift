@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 class WorkOuts {
@@ -14,6 +15,20 @@ class WorkOuts {
     
     
     func addExercise(exercise: Exercise) {
-        exercises.append(exercise)
+        if !exercises.contains(where: { $0 == exercise }) {
+            exercises.append(exercise)
+        }
     }
 }
+
+
+
+struct MuscleGroup {
+    
+    let name: String
+    let image: UIImage
+}
+
+
+
+
