@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A243C632B291834004764F4 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A243C612B291834004764F4 /* ProfileViewCell.swift */; };
-		0A243C642B291834004764F4 /* ProfileViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A243C622B291834004764F4 /* ProfileViewCell.xib */; };
+		0A10F62F2B2A1A9C00A15869 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10F62E2B2A1A9C00A15869 /* InstructionViewController.swift */; };
 		0A243C662B2918DE004764F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A243C652B2918DE004764F4 /* ProfileViewController.swift */; };
 		0A2984D52B28DFE800F8576D /* workOutAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2984D32B28DFE800F8576D /* workOutAddCell.swift */; };
 		0A2984D62B28DFE800F8576D /* workOutAddCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A2984D42B28DFE800F8576D /* workOutAddCell.xib */; };
@@ -27,8 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A243C612B291834004764F4 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
-		0A243C622B291834004764F4 /* ProfileViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewCell.xib; sourceTree = "<group>"; };
+		0A10F62E2B2A1A9C00A15869 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		0A243C652B2918DE004764F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0A2984D32B28DFE800F8576D /* workOutAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workOutAddCell.swift; sourceTree = "<group>"; };
 		0A2984D42B28DFE800F8576D /* workOutAddCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = workOutAddCell.xib; sourceTree = "<group>"; };
@@ -64,8 +62,6 @@
 			children = (
 				0A2984D32B28DFE800F8576D /* workOutAddCell.swift */,
 				0A2984D42B28DFE800F8576D /* workOutAddCell.xib */,
-				0A243C612B291834004764F4 /* ProfileViewCell.swift */,
-				0A243C622B291834004764F4 /* ProfileViewCell.xib */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -152,6 +148,7 @@
 				0AFFC6052B278465005E0025 /* OptionViewController.swift */,
 				0AFFC6072B278475005E0025 /* WorkOutViewController.swift */,
 				0A243C652B2918DE004764F4 /* ProfileViewController.swift */,
+				0A10F62E2B2A1A9C00A15869 /* InstructionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -218,7 +215,6 @@
 				0A3FB4452B276FA6005E0AEC /* Assets.xcassets in Resources */,
 				0A3FB4402B276FA5005E0AEC /* Main.storyboard in Resources */,
 				0A2984D62B28DFE800F8576D /* workOutAddCell.xib in Resources */,
-				0A243C642B291834004764F4 /* ProfileViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,12 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A243C632B291834004764F4 /* ProfileViewCell.swift in Sources */,
 				0A3FB4502B27708D005E0AEC /* APImanager.swift in Sources */,
 				0A2984D52B28DFE800F8576D /* workOutAddCell.swift in Sources */,
 				0A3FB43D2B276FA5005E0AEC /* StartPageViewController.swift in Sources */,
 				0A3FB4392B276FA5005E0AEC /* AppDelegate.swift in Sources */,
 				0A3FB43B2B276FA5005E0AEC /* SceneDelegate.swift in Sources */,
+				0A10F62F2B2A1A9C00A15869 /* InstructionViewController.swift in Sources */,
 				0A243C662B2918DE004764F4 /* ProfileViewController.swift in Sources */,
 				0A3FB45A2B277277005E0AEC /* Constants.swift in Sources */,
 				0AFFC6062B278465005E0025 /* OptionViewController.swift in Sources */,

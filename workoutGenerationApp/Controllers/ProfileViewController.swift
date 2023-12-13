@@ -19,7 +19,23 @@ class ProfileViewController: UIViewController {
 
     }
     
+    
+    
+    @IBSegueAction func loadInstruction(_ coder: NSCoder) -> InstructionViewController? {
+        
+        
+        if let indexPath = tableView.indexPathForSelectedRow{
+            
+            let selectedWorkout = WorkOuts.shared.exercises[indexPath.row]
+            
+            return InstructionViewController(coder: coder, exercise: selectedWorkout)
 
+        } else{
+            return nil
+        }
+        
+    }
+    
 
 }
 
@@ -36,13 +52,15 @@ extension ProfileViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "profileID") as! ProfileViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "profileCellID", for: indexPath)
         
-        cell.name.text = WorkOuts.shared.exercises[indexPath.row].name
+    
+        cell.textLabel?.text = WorkOuts.shared.exercises[indexPath.row].name
         
         return cell
         
     }
+    
     
     
     

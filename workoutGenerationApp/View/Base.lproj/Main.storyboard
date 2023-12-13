@@ -64,6 +64,19 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-I5-TeL">
                                 <rect key="frame" x="0.0" y="278" width="393" height="540"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCellID" id="c6z-tk-CL1">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c6z-tk-CL1" id="orY-kH-gRr">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tbn-hX-TH3" kind="presentation" destinationCreationSelector="loadInstruction:" id="b33-IG-50h"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VZ3-fs-aEm"/>
@@ -83,6 +96,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x2c-Qa-qIe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1052.6717557251909" y="660.56338028169023"/>
+        </scene>
+        <!--Instruction View Controller-->
+        <scene sceneID="TU2-tN-lUX">
+            <objects>
+                <viewController id="tbn-hX-TH3" customClass="InstructionViewController" customModule="workoutGenerationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="icx-JK-I58">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-6Z-nFL" userLabel="main">
+                                <rect key="frame" x="0.0" y="59" width="393" height="375"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dPR-D3-nZd">
+                                        <rect key="frame" x="96.666666666666686" y="0.0" width="200" height="125"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="125" id="49e-GI-d1f"/>
+                                            <constraint firstAttribute="width" constant="200" id="XKC-ir-smn"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="-174" translatesAutoresizingMaskIntoConstraints="NO" id="CCe-bd-bgT" userLabel="muscle/work">
+                                        <rect key="frame" x="91.333333333333329" y="125" width="210.66666666666669" height="125"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WorkOutName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-2u-hdb">
+                                                <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="149.66666666666666"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mucsle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjB-cU-Lkk">
+                                                <rect key="frame" x="72.333333333333329" y="-24.333333333333343" width="65.999999999999986" height="149.33333333333334"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instruction" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-8H-eym">
+                                        <rect key="frame" x="10" y="250" width="373" height="125"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="qpN-8H-eym" secondAttribute="trailing" constant="10" id="WxA-q0-r6y"/>
+                                    <constraint firstItem="qpN-8H-eym" firstAttribute="leading" secondItem="YZY-6Z-nFL" secondAttribute="leading" constant="10" id="tFU-QG-3f9"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AES-65-jrv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YZY-6Z-nFL" firstAttribute="top" secondItem="AES-65-jrv" secondAttribute="top" id="Trs-Dl-S7g"/>
+                            <constraint firstItem="YZY-6Z-nFL" firstAttribute="leading" secondItem="AES-65-jrv" secondAttribute="leading" id="g9Z-VR-e10"/>
+                            <constraint firstItem="AES-65-jrv" firstAttribute="bottom" secondItem="YZY-6Z-nFL" secondAttribute="bottom" id="h28-fm-CG9"/>
+                            <constraint firstItem="AES-65-jrv" firstAttribute="trailing" secondItem="YZY-6Z-nFL" secondAttribute="trailing" id="zlM-FT-syP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="dPR-D3-nZd" id="GVk-3g-0h8"/>
+                        <outlet property="instructions" destination="qpN-8H-eym" id="PHM-1U-qYl"/>
+                        <outlet property="muscle" destination="fjB-cU-Lkk" id="7dn-sT-YGZ"/>
+                        <outlet property="workOutName" destination="3e6-2u-hdb" id="qPy-GI-9aj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Eem-Vb-a1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1913.740458015267" y="660.56338028169023"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VBY-tm-f1O">
