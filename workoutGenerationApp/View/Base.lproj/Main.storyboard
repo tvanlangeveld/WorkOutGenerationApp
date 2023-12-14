@@ -62,7 +62,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-I5-TeL">
-                                <rect key="frame" x="0.0" y="278" width="393" height="540"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCellID" id="c6z-tk-CL1">
@@ -82,13 +82,36 @@
                         <viewLayoutGuide key="safeArea" id="VZ3-fs-aEm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="bmx-I5-TeL" firstAttribute="bottom" secondItem="VZ3-fs-aEm" secondAttribute="bottom" id="FpP-wo-TRp"/>
-                            <constraint firstItem="bmx-I5-TeL" firstAttribute="top" secondItem="VZ3-fs-aEm" secondAttribute="top" constant="175" id="jxk-3g-7lV"/>
-                            <constraint firstItem="bmx-I5-TeL" firstAttribute="leading" secondItem="VZ3-fs-aEm" secondAttribute="leading" id="kTQ-Db-NoT"/>
-                            <constraint firstItem="bmx-I5-TeL" firstAttribute="trailing" secondItem="VZ3-fs-aEm" secondAttribute="trailing" id="lbC-4g-EJW"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="top" secondItem="VZ3-fs-aEm" secondAttribute="top" id="4rj-Zs-PUj"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="bottom" secondItem="VZ3-fs-aEm" secondAttribute="bottom" id="AZS-r2-jbt"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="leading" secondItem="VZ3-fs-aEm" secondAttribute="leading" id="Xbm-zh-RoB"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="trailing" secondItem="VZ3-fs-aEm" secondAttribute="trailing" id="jwr-Jd-9gq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="d1A-Sx-CSR"/>
+                    <navigationItem key="navigationItem" id="d1A-Sx-CSR">
+                        <centerItemGroups>
+                            <barButtonItemGroup customizationDisposition="fixed" id="1fC-UC-ZbA">
+                                <barButtonItems>
+                                    <barButtonItem title="Reset Work Out List" id="Awu-JH-dPv">
+                                        <connections>
+                                            <action selector="resetBtn:" destination="KRk-2A-Obw" id="yfY-ak-faD"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Stop Watch" id="jSU-gX-60c">
+                                        <connections>
+                                            <segue destination="Bel-Kx-UIZ" kind="presentation" id="Vng-kL-6dz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Save Work Out" id="y0x-9u-jkv"/>
+                                    <barButtonItem title="Add Work Outs" id="hJj-S8-j5r">
+                                        <connections>
+                                            <segue destination="sqv-8v-faM" kind="show" id="RxD-dc-6yt"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </barButtonItems>
+                            </barButtonItemGroup>
+                        </centerItemGroups>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="bmx-I5-TeL" id="fhj-ua-fJU"/>
                     </connections>
@@ -116,7 +139,7 @@
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="-174" translatesAutoresizingMaskIntoConstraints="NO" id="CCe-bd-bgT" userLabel="muscle/work">
-                                        <rect key="frame" x="91.333333333333329" y="125" width="210.66666666666669" height="125"/>
+                                        <rect key="frame" x="91.333333333333314" y="125" width="210.66666666666669" height="125"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WorkOutName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3e6-2u-hdb">
                                                 <rect key="frame" x="0.0" y="0.0" width="210.66666666666666" height="149.66666666666666"/>
@@ -164,6 +187,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Eem-Vb-a1D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1913.740458015267" y="660.56338028169023"/>
+        </scene>
+        <!--Stop Watch View Controller-->
+        <scene sceneID="AO7-ag-tBz">
+            <objects>
+                <viewController id="Bel-Kx-UIZ" customClass="StopWatchViewController" customModule="workoutGenerationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P4A-kP-UoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pER-ca-J3j">
+                                <rect key="frame" x="115.66666666666667" y="349.66666666666669" width="161.66666666666663" height="83.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="jVK-vS-8mo">
+                                <rect key="frame" x="107.66666666666667" y="441.33333333333331" width="177.66666666666663" height="50.333333333333314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9b-em-dvu">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="50.333333333333336"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="timerBtn:" destination="Bel-Kx-UIZ" eventType="touchUpInside" id="ub9-3Y-Gci"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCn-R1-kUF">
+                                        <rect key="frame" x="100.33333333333334" y="0.0" width="77.333333333333343" height="50.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="restart.circle.fill" catalog="system" buttonSize="large"/>
+                                        <connections>
+                                            <action selector="resetBtn:" destination="Bel-Kx-UIZ" eventType="touchUpInside" id="Zt6-ea-gZi"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qhn-9L-iky"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pER-ca-J3j" firstAttribute="centerY" secondItem="P4A-kP-UoQ" secondAttribute="centerY" id="KDq-Ji-3RA"/>
+                            <constraint firstItem="jVK-vS-8mo" firstAttribute="centerY" secondItem="P4A-kP-UoQ" secondAttribute="centerY" constant="75" id="Sbh-LI-Td1"/>
+                            <constraint firstItem="pER-ca-J3j" firstAttribute="centerX" secondItem="P4A-kP-UoQ" secondAttribute="centerX" id="X8E-xA-kpA"/>
+                            <constraint firstItem="jVK-vS-8mo" firstAttribute="centerX" secondItem="P4A-kP-UoQ" secondAttribute="centerX" id="js2-8R-33c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startTitle" destination="Z9b-em-dvu" id="aX8-Ms-Xd2"/>
+                        <outlet property="timerLabel" destination="pER-ca-J3j" id="9Hy-cC-mgX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8k-oM-py6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052.6717557251909" y="1362.6760563380283"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VBY-tm-f1O">
@@ -218,7 +294,13 @@
                             <constraint firstItem="I0E-OW-NF3" firstAttribute="leading" secondItem="ML6-p8-8b4" secondAttribute="leading" id="n0N-WC-6ua"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cXn-ev-jJQ"/>
+                    <navigationItem key="navigationItem" id="cXn-ev-jJQ">
+                        <barButtonItem key="rightBarButtonItem" image="dumbbell.fill" catalog="system" id="4NV-cZ-3XD">
+                            <connections>
+                                <segue destination="KRk-2A-Obw" kind="show" id="zuS-Mg-HhG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="I0E-OW-NF3" id="OD5-x0-7Wt"/>
                     </connections>
@@ -276,7 +358,13 @@
             <point key="canvasLocation" x="2849.6183206106871" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="RxD-dc-6yt"/>
+        <segue reference="nhH-Up-85k"/>
+    </inferredMetricsTieBreakers>
     <resources>
+        <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
+        <image name="restart.circle.fill" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -14,11 +14,19 @@ class WorkOuts {
     static let shared = WorkOuts()
     
     
-    func addExercise(exercise: Exercise) {
-        if !exercises.contains(where: { $0 == exercise }) {
+    func userDidTapExercise(exercise: Exercise) {
+        if let index = exercises.firstIndex(of: exercise){
+            exercises.remove(at: index)
+        } else{
             exercises.append(exercise)
+
         }
     }
+    
+    func isExerciseSelected(_ exercise: Exercise) -> Bool {
+        exercises.contains(exercise)
+    }
+    
 }
 
 

@@ -22,9 +22,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mO0-Wr-LGq">
                                 <rect key="frame" x="0.0" y="0.0" width="384" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-qu-u18">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6k-qu-u18">
                                         <rect key="frame" x="299.33333333333331" y="5" width="49.666666666666686" height="34.333333333333336"/>
-                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="circle" catalog="system"/>
                                         <connections>
                                             <action selector="addBtn:" destination="dPW-Eh-ICt" eventType="touchUpInside" id="V7b-KJ-aei"/>
                                         </connections>
@@ -59,12 +59,14 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="isSelectedButton" destination="F6k-qu-u18" id="94W-60-Kjr"/>
                 <outlet property="workOutName" destination="y5v-re-V6E" id="8M9-Mh-PJ5"/>
             </connections>
             <point key="canvasLocation" x="77.862595419847324" y="3.5211267605633805"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

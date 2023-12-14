@@ -19,9 +19,11 @@ class workOutAddCell: UITableViewCell {
     
     var workOutInfo: Exercise?
     
+    var isClicked = false
     
     @IBOutlet weak var workOutName: UILabel!
     
+    @IBOutlet weak var isSelectedButton: UIButton!
     
 //    @IBOutlet weak var workOutType: UILabel!
     
@@ -29,13 +31,17 @@ class workOutAddCell: UITableViewCell {
     
     @IBAction func addBtn(_ sender: UIButton) {
         delegate?.didTapBtn(exercise: workOutInfo!)
+        isClicked.toggle()
+        setImageBtn()
         
     }
     
-    func setExercise(exercise: Exercise){
+    func setExercise(exercise: Exercise, isSelected: Bool){
         workOutInfo = exercise
         workOutName.text = exercise.name
-
+        isClicked = isSelected
+        setImageBtn()
+        
     }
     
     override func awakeFromNib() {
@@ -47,6 +53,12 @@ class workOutAddCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setImageBtn(){
+        
+        isSelectedButton.setImage(isClicked ? UIImage(systemName: "checkmark.circle") : UIImage(systemName: "circle"), for: .normal)
+
     }
     
 }

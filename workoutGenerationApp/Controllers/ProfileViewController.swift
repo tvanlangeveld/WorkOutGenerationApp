@@ -19,6 +19,15 @@ class ProfileViewController: UIViewController {
 
     }
     
+    @IBAction func resetBtn(_ sender: Any) {
+        
+        WorkOuts.shared.exercises = []
+        tableView.reloadData()
+    }
+    
+    
+    
+    
     
     
     @IBSegueAction func loadInstruction(_ coder: NSCoder) -> InstructionViewController? {

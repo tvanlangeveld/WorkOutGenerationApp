@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A0754C52B2B75EC00E54E92 /* StopWatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0754C42B2B75EC00E54E92 /* StopWatchViewController.swift */; };
 		0A10F62F2B2A1A9C00A15869 /* InstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A10F62E2B2A1A9C00A15869 /* InstructionViewController.swift */; };
 		0A243C662B2918DE004764F4 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A243C652B2918DE004764F4 /* ProfileViewController.swift */; };
 		0A2984D52B28DFE800F8576D /* workOutAddCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2984D32B28DFE800F8576D /* workOutAddCell.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A0754C42B2B75EC00E54E92 /* StopWatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchViewController.swift; sourceTree = "<group>"; };
 		0A10F62E2B2A1A9C00A15869 /* InstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionViewController.swift; sourceTree = "<group>"; };
 		0A243C652B2918DE004764F4 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0A2984D32B28DFE800F8576D /* workOutAddCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workOutAddCell.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 				0AFFC6072B278475005E0025 /* WorkOutViewController.swift */,
 				0A243C652B2918DE004764F4 /* ProfileViewController.swift */,
 				0A10F62E2B2A1A9C00A15869 /* InstructionViewController.swift */,
+				0A0754C42B2B75EC00E54E92 /* StopWatchViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				0AFFC6062B278465005E0025 /* OptionViewController.swift in Sources */,
 				0AFFC6082B278475005E0025 /* WorkOutViewController.swift in Sources */,
 				0A3FB4582B277246005E0AEC /* WorkOutGen.swift in Sources */,
+				0A0754C52B2B75EC00E54E92 /* StopWatchViewController.swift in Sources */,
 				0A3FB4432B276FA5005E0AEC /* workoutGenerationApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

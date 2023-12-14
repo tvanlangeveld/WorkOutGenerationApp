@@ -69,7 +69,9 @@ extension WorkOutViewController: UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "workOutCellID") as! workOutAddCell
         cell.delegate = self
-        cell.setExercise(exercise: exercisesArray[indexPath.row])
+        let exercise = exercisesArray[indexPath.row]
+        let isSelected = WorkOuts.shared.isExerciseSelected(exercise)
+        cell.setExercise(exercise: exercise, isSelected: isSelected )
         return cell
         
     }
@@ -79,7 +81,7 @@ extension WorkOutViewController: UITableViewDataSource{
 
 extension WorkOutViewController: workOutAddCellDelegate {
     func didTapBtn(exercise: Exercise) {
-        WorkOuts.shared.addExercise(exercise: exercise)
+        WorkOuts.shared.userDidTapExercise(exercise: exercise)
     }
     
  
