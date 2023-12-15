@@ -13,7 +13,7 @@ class StartPageCollectionViewController: UICollectionViewController {
     
     @IBOutlet var collectionVIew: UICollectionView!
     
-    let dataSource: [String] = ["Work Out Builder", "Saved Work Outs", "Stop Watch"]
+    let dataSource = [UIImage(named: "Fitness-Camp1"), UIImage(named: "Fitness-Camp2"), UIImage(named: "Fitness-Camp3")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class StartPageCollectionViewController: UICollectionViewController {
         
         if let titlePageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? StartPageCollectionViewCell {
          
-            titlePageCell.configure(with: dataSource[indexPath.row])
+            titlePageCell.configure(with: dataSource[indexPath.row]!)
             
             cell = titlePageCell
         }

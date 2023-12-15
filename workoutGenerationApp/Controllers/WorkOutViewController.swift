@@ -52,7 +52,7 @@ class WorkOutViewController: UIViewController, APIdelegate, UITableViewDelegate 
         tableView.dataSource = self
         tableView.delegate = self
         APImanager.shared.getExercises(muscle: workOutType)
-        titleLabel.text = workOutType
+        titleLabel.text = workOutType.capitalizingFirstLetter()
         
         tableView.register(UINib(nibName: "workOutAddCell", bundle: nil), forCellReuseIdentifier: "workOutCellID")
     }

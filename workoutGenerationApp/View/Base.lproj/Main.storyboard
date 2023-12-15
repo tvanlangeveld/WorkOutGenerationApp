@@ -31,8 +31,8 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GeH-fZ-tE7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="P12-R1-296">
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="13" minimumInteritemSpacing="13" id="P12-R1-296">
                             <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -46,22 +46,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9l3-jr-99H">
-                                            <rect key="frame" x="79" y="89.666666666666671" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ijq-2j-ExF">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="systemGray2Color"/>
                                     <constraints>
-                                        <constraint firstItem="9l3-jr-99H" firstAttribute="centerX" secondItem="H5d-hw-0WH" secondAttribute="centerX" id="Oqh-aN-8Ja"/>
-                                        <constraint firstItem="9l3-jr-99H" firstAttribute="centerY" secondItem="H5d-hw-0WH" secondAttribute="centerY" id="V2r-2h-OCA"/>
+                                        <constraint firstItem="ijq-2j-ExF" firstAttribute="leading" secondItem="H5d-hw-0WH" secondAttribute="leading" id="8cC-ks-bQv"/>
+                                        <constraint firstAttribute="trailing" secondItem="ijq-2j-ExF" secondAttribute="trailing" id="s1c-Ai-ux9"/>
+                                        <constraint firstAttribute="bottom" secondItem="ijq-2j-ExF" secondAttribute="bottom" id="x8o-yt-Ycq"/>
+                                        <constraint firstItem="ijq-2j-ExF" firstAttribute="top" secondItem="H5d-hw-0WH" secondAttribute="top" id="zup-mh-eHI"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="200" height="200"/>
                                 <connections>
-                                    <outlet property="cellTitle" destination="9l3-jr-99H" id="P1r-lq-coP"/>
+                                    <outlet property="image" destination="ijq-2j-ExF" id="Pa0-kY-1yX"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -89,7 +87,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-I5-TeL">
                                 <rect key="frame" x="0.0" y="59" width="393" height="724"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCellID" id="c6z-tk-CL1">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
@@ -106,11 +104,14 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VZ3-fs-aEm"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bmx-I5-TeL" firstAttribute="top" secondItem="VZ3-fs-aEm" secondAttribute="top" id="4rj-Zs-PUj"/>
                             <constraint firstItem="bmx-I5-TeL" firstAttribute="bottom" secondItem="VZ3-fs-aEm" secondAttribute="bottom" id="AZS-r2-jbt"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="top" secondItem="elc-BK-hhO" secondAttribute="top" id="DoB-eq-BRe"/>
+                            <constraint firstItem="VZ3-fs-aEm" firstAttribute="bottom" secondItem="bmx-I5-TeL" secondAttribute="bottom" id="Kj1-JR-Oy4"/>
                             <constraint firstItem="bmx-I5-TeL" firstAttribute="leading" secondItem="VZ3-fs-aEm" secondAttribute="leading" id="Xbm-zh-RoB"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="trailing" secondItem="VZ3-fs-aEm" secondAttribute="trailing" id="Zc7-rR-5PJ"/>
+                            <constraint firstItem="bmx-I5-TeL" firstAttribute="leading" secondItem="VZ3-fs-aEm" secondAttribute="leading" id="bnJ-DN-5Ep"/>
                             <constraint firstItem="bmx-I5-TeL" firstAttribute="trailing" secondItem="VZ3-fs-aEm" secondAttribute="trailing" id="jwr-Jd-9gq"/>
                         </constraints>
                     </view>
@@ -199,7 +200,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AES-65-jrv"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="YZY-6Z-nFL" firstAttribute="top" secondItem="AES-65-jrv" secondAttribute="top" id="Trs-Dl-S7g"/>
                             <constraint firstItem="YZY-6Z-nFL" firstAttribute="leading" secondItem="AES-65-jrv" secondAttribute="leading" id="g9Z-VR-e10"/>
@@ -227,25 +228,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pER-ca-J3j">
-                                <rect key="frame" x="115.66666666666667" y="349.66666666666669" width="161.66666666666663" height="83.666666666666686"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <rect key="frame" x="108.00000000000001" y="345.66666666666669" width="177.33333333333337" height="92"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="77"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="jVK-vS-8mo">
-                                <rect key="frame" x="107.66666666666667" y="441.33333333333331" width="177.66666666666663" height="50.333333333333314"/>
+                                <rect key="frame" x="81" y="439" width="231" height="55.333333333333314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z9b-em-dvu">
-                                        <rect key="frame" x="0.0" y="0.0" width="77.333333333333329" height="50.333333333333336"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Start" buttonSize="large"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="55.333333333333336"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Start" cornerStyle="capsule" buttonSize="large">
+                                            <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="4">
+                                                <color key="strokeColor" systemColor="labelColor"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="HoeflerText-Black" family="Hoefler Text" pointSize="25"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGray4Color"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="timerBtn:" destination="Bel-Kx-UIZ" eventType="touchUpInside" id="ub9-3Y-Gci"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCn-R1-kUF">
-                                        <rect key="frame" x="100.33333333333334" y="0.0" width="77.333333333333343" height="50.333333333333336"/>
+                                        <rect key="frame" x="127" y="0.0" width="104" height="55.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" image="restart.circle.fill" catalog="system" buttonSize="large"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="backward.fill" catalog="system" cornerStyle="capsule" buttonSize="large">
+                                            <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="4">
+                                                <color key="strokeColor" systemColor="labelColor"/>
+                                            </backgroundConfiguration>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                            <color key="baseBackgroundColor" systemColor="systemGray4Color"/>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="resetBtn:" destination="Bel-Kx-UIZ" eventType="touchUpInside" id="Zt6-ea-gZi"/>
                                         </connections>
@@ -254,7 +268,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qhn-9L-iky"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="pER-ca-J3j" firstAttribute="centerY" secondItem="P4A-kP-UoQ" secondAttribute="centerY" id="KDq-Ji-3RA"/>
                             <constraint firstItem="jVK-vS-8mo" firstAttribute="centerY" secondItem="P4A-kP-UoQ" secondAttribute="centerY" constant="75" id="Sbh-LI-Td1"/>
@@ -390,16 +404,19 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="RxD-dc-6yt"/>
+        <segue reference="zuS-Mg-HhG"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="backward.fill" catalog="system" width="128" height="77"/>
         <image name="dumbbell.fill" catalog="system" width="128" height="72"/>
-        <image name="restart.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

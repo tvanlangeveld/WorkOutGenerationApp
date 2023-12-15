@@ -16,22 +16,22 @@ class InstructionViewController: UIViewController {
     
     
     let muscleGroups: [MuscleGroup] = [
-        MuscleGroup(name: "abdominals", image: UIImage(named: "icons8-abs-100")!),
-        MuscleGroup(name: "abductors", image: UIImage(named: "icons8-abs-100")!),
-        MuscleGroup(name: "adductors", image: UIImage(named: "icons8-abs-100")!),
-        MuscleGroup(name: "lower_back", image: UIImage(named: "icons8-back-muscles-100")!),
-        MuscleGroup(name: "middle_back", image: UIImage(named: "icons8-back-muscles-100")!),
-        MuscleGroup(name: "biceps", image: UIImage(named: "icons8-biceps-100")!),
-        MuscleGroup(name: "lats", image: UIImage(named: "icons8-bodybuilder-100")!),
-        MuscleGroup(name: "calves", image: UIImage(named: "icons8-calves-100")!),
-        MuscleGroup(name: "forearms", image: UIImage(named: "icons8-elbow-100")!),
-        MuscleGroup(name: "glutes", image: UIImage(named: "icons8-leg-100")!),
-        MuscleGroup(name: "quadriceps", image: UIImage(named: "icons8-leg-100")!),
-        MuscleGroup(name: "hamstrings", image: UIImage(named: "icons8-leg-100")!),
-        MuscleGroup(name: "neck", image: UIImage(named: "icons8-neck-100")!),
-        MuscleGroup(name: "traps", image: UIImage(named: "icons8-neck-100")!),
-        MuscleGroup(name: "triceps", image: UIImage(named: "icons8-triceps-100")!),
-        MuscleGroup(name: "chest", image: UIImage(named: "icons8-chest-100")!)
+        MuscleGroup(name: "abdominals", image: UIImage(named: "icons8-abs-500")!),
+        MuscleGroup(name: "abductors", image: UIImage(named: "icons8-abs-500")!),
+        MuscleGroup(name: "adductors", image: UIImage(named: "icons8-abs-500")!),
+        MuscleGroup(name: "lower_back", image: UIImage(named: "icons8-back-muscles-500")!),
+        MuscleGroup(name: "middle_back", image: UIImage(named: "icons8-back-muscles-500")!),
+        MuscleGroup(name: "biceps", image: UIImage(named: "icons8-biceps-500")!),
+        MuscleGroup(name: "lats", image: UIImage(named: "icons8-bodybuilder-500")!),
+        MuscleGroup(name: "calves", image: UIImage(named: "icons8-calves-500")!),
+        MuscleGroup(name: "forearms", image: UIImage(named: "icons8-elbow-500")!),
+        MuscleGroup(name: "glutes", image: UIImage(named: "icons8-leg-500")!),
+        MuscleGroup(name: "quadriceps", image: UIImage(named: "icons8-leg-500")!),
+        MuscleGroup(name: "hamstrings", image: UIImage(named: "icons8-leg-500")!),
+        MuscleGroup(name: "neck", image: UIImage(named: "icons8-neck-500")!),
+        MuscleGroup(name: "traps", image: UIImage(named: "icons8-neck-500")!),
+        MuscleGroup(name: "triceps", image: UIImage(named: "icons8-triceps-500")!),
+        MuscleGroup(name: "chest", image: UIImage(named: "icons8-chest-500")!)
     ]
     
     
@@ -65,7 +65,7 @@ class InstructionViewController: UIViewController {
     
     func imagePlacer(){
         
-        var imageName = selectedWorkout.muscle
+        let imageName = selectedWorkout.muscle
         print(imageName)
         if let index = muscleGroups.firstIndex(where: { $0.name == imageName }) {
             

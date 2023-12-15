@@ -10,11 +10,13 @@ import UIKit
 class StartPageCollectionViewCell: UICollectionViewCell {
     
     
-    @IBOutlet weak var cellTitle: UILabel!
     
     
-    func configure(with sectionName: String){
-        cellTitle.text = sectionName
+    @IBOutlet weak var image: UIImageView!
+    
+    func configure(with sectionName: UIImage){
+        
+        image.image = sectionName
     }
     
     

@@ -66,7 +66,11 @@ class OptionViewController: UIViewController {
     
 }
 
-
+extension String {
+    func capitalizingFirstLetter() -> String {
+        return prefix(1).capitalized + dropFirst()
+    }
+}
 
 extension OptionViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -75,7 +79,9 @@ extension OptionViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "workGroupOutCell")
-        cell?.textLabel?.text = workOutTypes[indexPath.row]
+        let originalStr = workOutTypes[indexPath.row]
+        let capitalString = originalStr.capitalizingFirstLetter()
+        cell?.textLabel?.text = capitalString
         
         return cell!
     }

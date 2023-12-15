@@ -12,7 +12,7 @@ class StopWatchViewController: UIViewController {
     var elapsedTime: TimeInterval = 0
     var stopWatchTimer: Timer?
     
-    var timerLabelText = "0:00.00"
+    var timerLabelText = "00:00"
     
     @IBOutlet weak var timerLabel: UILabel!
     
@@ -42,10 +42,9 @@ class StopWatchViewController: UIViewController {
                     
                     let minutes = Int(self?.elapsedTime ?? 0) / 60 % 60
                     let seconds = Int(self?.elapsedTime ?? 0) % 60
-                    let milliseconds = Int((self?.elapsedTime ?? 0) * 100) % 100
                     
                     DispatchQueue.main.async {
-                        self?.timerLabel.text = String(format: "%02d:%02d.%02d", minutes, seconds, milliseconds)
+                        self?.timerLabel.text = String(format: "%02d:%02d", minutes, seconds)
                     }
                     
                     
