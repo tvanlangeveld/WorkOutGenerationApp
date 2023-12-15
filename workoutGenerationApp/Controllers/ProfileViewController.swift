@@ -19,6 +19,22 @@ class ProfileViewController: UIViewController {
 
     }
     
+    
+    
+//    @IBAction func saveWorkOut(_ sender: UIBarButtonItem) {
+//        
+//        var textField = UITextField()
+//        
+//        let alert = UIAlertController(title: "Name Work Out", message: "", preferredStyle: .alert)
+//        
+//        let action = UIAlertAction(title: "Save Work Out", style: .default)
+//        
+//        
+//    }
+    
+    
+    
+    
     @IBAction func resetBtn(_ sender: Any) {
         
         WorkOuts.shared.exercises = []
