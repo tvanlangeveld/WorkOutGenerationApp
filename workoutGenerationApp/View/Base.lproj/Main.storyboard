@@ -200,7 +200,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AES-65-jrv"/>
-                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YZY-6Z-nFL" firstAttribute="top" secondItem="AES-65-jrv" secondAttribute="top" id="Trs-Dl-S7g"/>
                             <constraint firstItem="YZY-6Z-nFL" firstAttribute="leading" secondItem="AES-65-jrv" secondAttribute="leading" id="g9Z-VR-e10"/>
