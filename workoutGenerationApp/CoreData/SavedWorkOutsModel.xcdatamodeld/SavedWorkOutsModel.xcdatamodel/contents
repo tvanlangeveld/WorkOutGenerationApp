@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G72" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="WorkOutDataModel" representedClassName=".WorkOutDataModel" syncable="YES" codeGenerationType="class">
-        <attribute name="createdName" attributeType="String"/>
-        <attribute name="difficulty" attributeType="String"/>
-        <attribute name="equipment" attributeType="String"/>
-        <attribute name="instructions" attributeType="String"/>
-        <attribute name="muscle" attributeType="String"/>
-        <attribute name="name" attributeType="String"/>
-        <attribute name="type" attributeType="String"/>
+    <entity name="CoreDataExercise" representedClassName="CoreDataExercise" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="workOut" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreDataWorkOut" inverseName="exercise" inverseEntity="CoreDataWorkOut"/>
+    </entity>
+    <entity name="CoreDataWorkOut" representedClassName="CoreDataWorkOut" syncable="YES" codeGenerationType="class">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="exercise" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreDataExercise" inverseName="workOut" inverseEntity="CoreDataExercise"/>
     </entity>
 </model>

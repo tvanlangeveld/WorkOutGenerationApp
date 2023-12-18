@@ -19,18 +19,34 @@ class ProfileViewController: UIViewController {
 
     }
     
+
     
+    @IBAction func saveWorkOut(_ sender: UIBarButtonItem) {
+        
+        let alert = UIAlertController(title: "Name Work Out", message: "Type Here", preferredStyle: .alert)
+        
+        alert.addTextField()
+        
+        let submitButton = UIAlertAction(title: "Save Work Out", style: .default) {(action) in
+            
+            let textfield = alert.textFields![0]
+            
+            if let workOutName = textfield.text {
+                
+                CoreDataManager.shared.createWorkOut(name: workOutName)
+
+            }
+           
+            
+        }
+        
+        
+        alert.addAction(submitButton)
+        present(alert, animated: true, completion: nil)
+        
+        
     
-//    @IBAction func saveWorkOut(_ sender: UIBarButtonItem) {
-//        
-//        var textField = UITextField()
-//        
-//        let alert = UIAlertController(title: "Name Work Out", message: "", preferredStyle: .alert)
-//        
-//        let action = UIAlertAction(title: "Save Work Out", style: .default)
-//        
-//        
-//    }
+    }
     
     
     
