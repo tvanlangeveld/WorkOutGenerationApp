@@ -14,7 +14,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.isEditing = true
+        tableView.isEditing = false
 
         tableView.register(UINib(nibName: "ProfileViewCell", bundle: nil), forCellReuseIdentifier: "profileID")
 

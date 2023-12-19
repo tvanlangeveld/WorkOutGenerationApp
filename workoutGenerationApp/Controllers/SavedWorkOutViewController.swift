@@ -20,16 +20,8 @@ class SavedWorkOutViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.isEditing = false
 
-        for coreDataWorkOut in coreDataWorkOuts {
-            print(coreDataWorkOut.name)
-            
-
-        }
-        
-        
-        
     }
     
 
@@ -74,6 +66,17 @@ extension SavedWorkOutViewController: UITableViewDataSource{
         
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            
+            
+            CoreDataManager.shared.deleteWorkOut(name: coreDataWorkOuts[indexPath.row].name!)
+            coreDataWorkOuts.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+ 
 }
 
 

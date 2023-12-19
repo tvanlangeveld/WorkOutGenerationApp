@@ -61,4 +61,23 @@ class CoreDataManager {
         return returnArray
         
     }
+    
+    func deleteWorkOut(name: String) {
+        let context = persistentContainer.viewContext
+
+        let fetchRequest: NSFetchRequest<CoreDataWorkOut> = CoreDataWorkOut.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", name)
+
+        do {
+            let results = try context.fetch(fetchRequest)
+
+            for workOut in results {
+                context.delete(workOut)
+            }
+
+            try context.save()
+        } catch {
+            print("Error deleting workout: \(error)")
+        }
+    }
 }
