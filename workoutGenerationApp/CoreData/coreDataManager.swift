@@ -33,7 +33,10 @@ class CoreDataManager {
         for exercise in WorkOuts.shared.exercises {
             let coreDataExercise = CoreDataExercise(context: persistentContainer.viewContext)
             coreDataExercise.name = exercise.name
+            coreDataExercise.muscle = exercise.muscle
+            coreDataExercise.instruction = exercise.instructions
             workOut.addToExercise(coreDataExercise)
+            
         }
         
         do{

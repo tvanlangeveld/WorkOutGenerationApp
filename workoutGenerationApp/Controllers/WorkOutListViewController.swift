@@ -42,6 +42,7 @@ extension WorkOutListViewController: UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: "workOutListCell", for: indexPath)
         
         cell.textLabel?.text = selectedWorkouts[indexPath.row].name
+        cell.detailTextLabel?.text = selectedWorkouts[indexPath.row].muscle
         
         return cell
     }

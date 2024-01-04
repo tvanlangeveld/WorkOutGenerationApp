@@ -83,11 +83,3 @@ extension SavedWorkOutViewController: UITableViewDataSource{
 
 
 
-//        for coreDataWorkOut in coreDataWorkOuts {
-//            let allObjects = coreDataWorkOut.exercise?.allObjects as! [CoreDataExercise]
-//
-//            for exercise in allObjects {
-//                print(exercise.name)
-//            }
-//
-//        }
